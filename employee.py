@@ -28,7 +28,7 @@ class HourlyContract(Contract, Dynamic):
         return self.pay
 
     def __str__(self):
-        return f'contract of {self.amount} hours at {self.rate}/hour.'
+        return f'works on a contract of {self.amount} hours at {self.rate}/hour'
 
 class VariableCommission(Contract, Dynamic):
     def __init__(self, contracts, rate):
@@ -38,7 +38,7 @@ class VariableCommission(Contract, Dynamic):
         return self.pay
 
     def __str__(self):
-        return f'receives a commission for {self.amount} contract(s) at {self.rate}/contract hours.'
+        return f'receives a commission for {self.amount} contract(s) at {self.rate}/contract.'
 
 class FixedContract(Contract):
     def __init__(self, pay):
@@ -48,7 +48,7 @@ class FixedContract(Contract):
         return self.pay
 
     def __str__(self):
-        return f'works on a monthly salary of {self.pay}.'
+        return f'works on a monthly salary of {self.pay}'
 
 
 class FixedCommission(Contract):
